@@ -1,0 +1,23 @@
+# SELECT
+#     ANIMAL_TYPE,
+#     IF(NAME IS NULL, "No name", NAME),
+#     SEX_UPON_INTAKE
+# FROM ANIMAL_INS;
+
+SELECT 
+    ANIMAL_TYPE,
+    CASE
+        WHEN NAME IS NULL THEN "No name"
+        ELSE NAME
+    END AS NAME,
+    SEX_UPON_INTAKE
+FROM ANIMAL_INS;
+
+
+# ORACLE
+# SELECT 
+#     ANIMAL_TYPE,
+#     NVL(NAME, 'No name') AS NAME,  -- NVL로 'No name' 처리
+#     SEX_UPON_INTAKE
+# FROM ANIMAL_INS
+# ORDER BY ANIMAL_ID;
